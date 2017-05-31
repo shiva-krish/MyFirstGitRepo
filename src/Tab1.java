@@ -15,6 +15,8 @@ import javax.swing.JTextArea;
 import java.net.*;
 import java.io.*;
 import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Tab1 {
 
@@ -108,5 +110,10 @@ public class Tab1 {
 		Portno.setColumns(10);
 		Portno.setBounds(144, 44, 159, 20);
 		frame.getContentPane().add(Portno);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Test1", "Test2", "Test3"}));
+		comboBox.setBounds(255, 79, 97, 20);
+		frame.getContentPane().add(comboBox);
 	}
 }
